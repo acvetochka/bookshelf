@@ -38,7 +38,7 @@ export const team = [
     name: 'Viktoriia Khmelevska',
     position: 'Developer',
     description: '',
-    img: 'https://raw.githubusercontent.com/acvetochka/bookshelf/main/src/images/team/viktoria-khmelevska.png',
+    img: 'https://raw.githubusercontent.com/acvetochka/bookshelf/main/src/images/team/viktoriia-khmelevska.png',
     url: 'https://github.com/ViktoriiaKhmelevska',
   },
   {
