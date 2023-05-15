@@ -4,7 +4,7 @@ body.modal-team-open {
 
 .backdrop-team {
     position: fixed;
-    z-index: 2;
+    z-index: 999;
     top: 0;
     left: 0;
     width: 100%;
@@ -24,11 +24,15 @@ body.modal-team-open {
 
 .modal-team {
     position: absolute;
-    top: 50%;
+    border: 2px solid $bg-color;
+    top: 20px;
     left: 50%;
-    width: 80%;
+    padding: 20px;
+    // width: 80%;
+    // max-width: 800px;
+    border-radius: 18px;
     height: auto;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%) scale(1);
     background-color: $bg-color;
     transition: transform 250ms $cubic, background-color 250ms $cubic;
 
@@ -39,21 +43,93 @@ body.modal-team-open {
     .dark-theme & {
         background-color: $bg-color-darkt;
     }
+
+    @media screen and (min-width: 1440px) {
+
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.modal-team__close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    cursor: pointer;
+    color: $logo-color;
+    transition: color 250ms $cubic;
+
+
+    &:hover {
+        color: $accent-text-color;
+
+        .dark-theme & {
+            color: $primary-accent-color;
+        }
+    }
+}
+
+.modal-team__close-icon {
+    fill: currentColor;
+
+    // .modal-team__close-btn:hover & {
+    //     fill: $accent-text-color;
+
+    //     .dark-theme & {
+    //         fill: $primary-accent-color;
+    //     }
+    // }
+
+}
+
+.modal-team__head-title {
+    font-size: 20px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: $accent-text-color;
+
+    .dark-theme & {
+        color: $primary-accent-color
+    }
 }
 
 .modal-team__list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+.modal-team__item {
+    // width: calc((100% - 60px)/4)
+    width: 175px;
 }
 
 .modal-team__img-container {
+    position: relative;
     display: flex;
     align-items: start;
 
+
+}
+
+.modal-team__img {
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .modal-team__link-github {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     color: $logo-color;
 
     .dark-theme & {
@@ -74,6 +150,7 @@ body.modal-team-open {
     }
 
 }
+
 
 
 .modal-team__icon-github {
