@@ -1,2 +1,9 @@
+@import './variables';
 @import './common';
+
 @import './example';
+@import './modal-team';
+
+.main-container {
+  display: flex;
+}

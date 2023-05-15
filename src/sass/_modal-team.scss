@@ -1,0 +1,94 @@
+body.modal-team-open {
+    overflow: hidden;
+}
+
+.backdrop-team {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms $cubic,
+        visibility 250ms $cubic;
+    overflow-y: scroll;
+
+    &--hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+.modal-team {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: auto;
+    transform: translate(-50%, -50%) scale(1);
+    background-color: $bg-color;
+    transition: transform 250ms $cubic, background-color 250ms $cubic;
+
+    .backdrop-team--hidden & {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    .dark-theme & {
+        background-color: $bg-color-darkt;
+    }
+}
+
+.modal-team__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.modal-team__img-container {
+    display: flex;
+    align-items: start;
+
+}
+
+.modal-team__link-github {
+    color: $logo-color;
+
+    .dark-theme & {
+        color: $primary-text-color-darkt;
+    }
+
+
+    &:hover {
+        color: $accent-text-color;
+
+        .dark-theme & {
+            color: $primary-accent-color;
+        }
+    }
+
+    .modal-team__link-github:hover & {
+        transform: rotate(360deg) scale(1.5);
+    }
+
+}
+
+
+.modal-team__icon-github {
+    fill: currentColor;
+    transform: rotate(0deg) scale(1);
+    transition: transform 250ms $cubic;
+
+    .modal-team__link-github:hover & {
+        transform: rotate(360deg)scale(1.5);
+    }
+}
+
+.modal-team__title {
+
+    .dark-theme & {
+        color: $primary-text-color-darkt;
+    }
+}
