@@ -31,7 +31,7 @@ export const team = [
     name: 'Tetiana Palii',
     position: ' Developer',
     description: '',
-    img: 'https://raw.githubusercontent.com/acvetochka/bookshelf/main/src/images/team/tetiana-palii.jpg',
+    img: 'https://raw.githubusercontent.com/acvetochka/bookshelf/main/src/images/team/masha-kozlova.jpg',
     url: 'https://github.com/TetiPalii',
   },
   {
