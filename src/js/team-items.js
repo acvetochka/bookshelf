@@ -10,7 +10,7 @@ export const team = [
     name: 'Oleksii Maiok',
     position: 'Scrum, Developer',
     description: '',
-    img: 'https://raw.githubusercontent.com/acvetochka/bookshelf/main/src/images/team/nazar-mural.jpg',
+    img: 'https://raw.githubusercontent.com/acvetochka/bookshelf/main/src/images/team/oleksii-maiok.jpg',
     url: 'https://github.com/Maniyavel',
   },
   {

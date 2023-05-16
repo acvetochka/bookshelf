@@ -117,13 +117,20 @@ body.modal-team-open {
     position: relative;
     display: flex;
     align-items: start;
+    // box-shadow: inset 3px 0 3px 3px $bg-color-darkt;
 
 
+}
+
+.modal-team__img-wrap {
+    border-radius: 50%;
+    box-shadow: inset 3px 0 3px 3px $bg-color-darkt;
 }
 
 .modal-team__img {
     object-fit: cover;
     border-radius: 50%;
+    z-index: -1;
 }
 
 .modal-team__link-github {

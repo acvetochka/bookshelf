@@ -32,7 +32,9 @@ function creatMarkupTeam() {
     .map(
       ({ name, img, position, url }) => ` <li class="modal-team__item">
   <div class="modal-team__img-container">
+  <div class="modal-team__img-wrap">
       <img class="modal-team__img" src="${img}" alt="${name}" width="150" height="150">
+      </div>
               <a class="modal-team__link-github" target="_blanc" href="${url}">
               <svg class="modal-team__icon-github" width="24" height="24">
               <use href="${svgGithubUrl}#icon-github"></use>
